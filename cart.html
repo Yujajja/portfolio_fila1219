@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>FILA-cyj</title>
+    <link rel="stylesheet" href="cart.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 헤더 아이콘 폰트어썸 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- 메인 슬라이드 스와이퍼 -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+    <!-- AOS 플러그인 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+
+<body>
+
+    <div w3-include-html="header.html"></div>
+
+    <main>
+
+
+        <script>
+
+            var modal = document.querySelector(".modal");
+            var trigger = document.querySelector(".trigger");
+            var closeButton = document.querySelector(".close-button");
+
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
+
+        </script>
+
+    </main>
+
+    <article class="main-cart">
+
+        <h3>장바구니</h3>
+
+        <div class="cart-option">
+
+            <div class="cart-button">
+                <h4 onclick="showContent(1)" class="selected">택배(1)</h4>
+                <h4 onclick="showContent(2)" class="selected">매장수령(0)</h4>
+            </div>
+
+            <div class="cart-menu">
+
+                <div id="content1" class="content">
+
+                    <table>
+
+                        <tr class="cart-first">
+                            <th>
+                                <h5>상품정보</h5>
+                            </th>
+                            <th>
+                                <h5>상품금액</h5>
+                            </th>
+                            <th>
+                                <h5>선택</h5>
+                            </th>
+                            <th>
+                                <h5>배송정보</h5>
+                            </th>
+                        </tr>
+
+                        <tr class="cart-second">
+                            <td> <img
+                                    src="image/cart-purchase01.jpg">
+
+                                <div>
+                                    <p>FILA LIFESTYLE</p>
+                                    <p>
+                                        <한소희 착용>
+                                            <밀라노다운> 후드 구스다운 숏패딩자켓
+                                    </p>
+                                    <p>BLACK , 095 <span class="gray">수량 : 1개</span></p>
+                                    <a href="./purchase.html">옵션변경 <i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                            </td>
+
+                            <td>
+                                <p>327,600원</p>
+                                <p><span class="gray">409,500원</span></p>
+                            </td>
+
+                            <td>
+                                <p>바로구매</p>
+                            </td>
+
+                            <td>
+                                <p>[본사배송]</p>
+                                <p>무료배송</p>
+                                <p class="gray">30,000원 미만 결제시 2,500원</p>
+                            </td>
+                        </tr>
+
+
+                    </table>
+
+                    <div class="cart-delete">
+                        <button>
+                            <p>선택삭제</p>
+                        </button>
+                        <button>
+                            <p>품절삭제</p>
+                        </button>
+                    </div>
+
+                    <div class="cart-amount">
+                        <div class="amount-n">
+                            <p>상품금액</p>
+                            <p><span class="number">409,500</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>+</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>배송비</p>
+                            <p><span class="number">0</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>-</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>총 할인금액</p>
+                            <p><span class="number navy">81,900</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>=</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>결제금액</p>
+                            <p><span class="number">327,600</span> 원</p>
+                        </div>
+                    </div>
+
+                    <div class="amount-button">
+                        <button>
+                            <h5><a href="./purchase.html">쇼핑 계속하기</a></h5>
+                        </button>
+                        <button>
+                            <h5>선택상품 주문하기</h5>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+                <div id="content2" class="content">
+
+
+                    <table>
+
+                        <tr class="cart-first">
+                            <th>
+                                <h5>상품정보</h5>
+                            </th>
+                            <th>
+                                <h5>상품금액</h5>
+                            </th>
+                            <th>
+                                <h5>선택</h5>
+                            </th>
+                            <th>
+                                <h5>배송정보</h5>
+                            </th>
+                        </tr>
+                    </table>
+
+
+                    <div>
+                        <img src="image/cart-none-icon.png">
+                        <h5>장바구니에 담긴 상품이 없습니다.</h5>
+                    </div>
+
+
+
+
+
+
+                    <div class="cart-delete">
+                        <button>
+                            <p>선택삭제</p>
+                        </button>
+                        <button>
+                            <p>품절삭제</p>
+                        </button>
+                    </div>
+
+
+                    <div class="cart-amount">
+                        <div class="amount-n">
+                            <p>상품금액</p>
+                            <p><span class="number">0</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>+</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>배송비</p>
+                            <p><span class="number">0</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>-</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>총 할인금액</p>
+                            <p><span class="number navy">0</span> 원</p>
+                        </div>
+
+                        <div class="amount-s">
+                            <p>=</p>
+                        </div>
+
+                        <div class="amount-n">
+                            <p>결제금액</p>
+                            <p><span class="number">0</span> 원</p>
+                        </div>
+                    </div>
+
+                    <div class="amount-button">
+                        <button><a href="./purchase.html">
+                                <h5>쇼핑 계속하기</h5>
+                            </a>
+                        </button>
+                        <button>
+                            <h5>선택상품 주문하기</h5>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="amount-info">
+                    <p>장바구니에 담긴 상품은 30일 동안 보관됩니다. 30일이 지난 상품은 자동 삭제됩니다.</p>
+                    <p>장바구니에 최대 50개까지 상품을 보관이 가능하며, 실제 구매 시에는 가격이나 혜택이 변경될 수 있습니다.</p>
+                    <p>장바구니에 담은 상품이 판매종료가 되었을 경우 자동 삭제 됩니다.</p>
+                    <p>입점 판매 상품은 장바구니에서 [입점 판매 상품]으로 표시됩니다.</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        </div>
+
+
+
+    </article>
+
+    <!--cart-button -->
+    <script>
+        function showContent(option) {
+            var content1 = document.getElementById("content1");
+            var content2 = document.getElementById("content2");
+
+            var h4Elements = document.querySelectorAll(".cart-button h4");
+            h4Elements.forEach(function (element) {
+                element.classList.remove("selected");
+            });
+
+            if (option === 1) {
+                content1.style.display = "block";
+                content2.style.display = "none";
+            } else if (option === 2) {
+                content1.style.display = "none";
+                content2.style.display = "block";
+            } else {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                console.log("올바른 옵션 번호를 선택해주세요.");
+            }
+
+            var selectedElement = document.querySelector(".cart-button h4:nth-child(" + option + ")");
+            selectedElement.classList.add("selected");
+        }
+
+        // 페이지가 로드될 때 최신 뉴스 확인하기 부분을 열도록 초기 호출
+        showContent(1);
+    </script>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>

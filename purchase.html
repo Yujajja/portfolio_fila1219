@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>FILA-cyj</title>
+    <link rel="stylesheet" href="purchase.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 헤더 아이콘 폰트어썸 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+    <!-- AOS 플러그인 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+
+<body>
+
+    <div w3-include-html="header.html"></div>
+    <main>
+
+
+
+    </main>
+
+    <script>
+
+        var modal = document.querySelector(".modal");
+        var trigger = document.querySelector(".trigger");
+        var closeButton = document.querySelector(".close-button");
+
+        function toggleModal() {
+            modal.classList.toggle("show-modal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+
+    </script>
+
+
+    <!--퍼체이스 아티클 start-->
+
+    <article class="main-box">
+
+        <div>
+            <!-- nested on purpose to test it -->
+            <div class="main-container">
+
+                <div>
+                    <section class="images-container">
+                        <img src='image/purchase-main-box01.png' alt=''>
+                        <img src='image/purchase-main-box02.png' alt=''>
+                        <img src='image/purchase-main-box03.jpg' alt=''>
+                        <img src='image/purchase-main-box04.jpg' alt=''>
+                        <img src='image/purchase-main-box05.jpg' alt=''>
+                        <img src='image/purchase-main-box06.jpg' alt=''>
+                    </section>
+                </div>
+
+                <div>
+                    <aside class="img-sticky">
+                        <div class="video-contanier">
+                            <video loop muted autoplay source src="image/purchase-video.mp4">
+                            </video>
+                        </div>
+
+                        <div>
+
+                            <p>키 173cm / 착용 사이즈 S<br>
+                                모델 착용 이미지보다 제품컷 이미지의 컬러가 정확합니다.</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <aside class="sidebar">
+
+                    <div>
+                        <h5>FILA LIFESTYLE<i class="fa-solid fa-chevron-right"></i></h5>
+                        <img src="image/purchase-sidebar01.png">
+                    </div>
+
+                    <div>
+                        <h5>MILANO DOWN<span class="navy">24 S/S 신상</span></h5>
+                        <h3>후드 구스다운 숏패딩자켓</h3>
+
+                        <div>
+                            <h3>409,500</h3>
+                        </div>
+
+                        <div>
+                            <h3 class="navy">327,600</h3>
+                            <p>회원/멤버십 쿠폰가</p>
+                            <p class="c-button"><a href="javascript:alert('로그인 후 이용가능합니다.');" onfocus="this.blur()"
+                                    href="#"> 쿠폰다운로드</a></p>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <h5>컬러</h5>
+
+
+                        <div class="right-color">
+
+                            <div class="color-slider">
+
+                                <div class="element slick"><img
+                                        src="https://filacdn.styleship.com/filaproduct2/data/productimages/a/1/FS2DJF4161F_CRM.jpg"
+                                        onmouseover="this.src='https://filacdn.styleship.com/filaproduct2/data/productimages/a/1/FS2DJF4161F_IVY.jpg'"
+                                        onmouseout="this.src='https://filacdn.styleship.com/filaproduct2/data/productimages/a/1/FS2DJF4161F_CRM.jpg'">
+                                </div>
+                                <div class="element slick"><img src="image/purchase-color01.jpg">
+                                </div>
+                                <div class="element slick"><img src="image/purchase-color02.jpg">
+                                </div>
+                                <div class="element slick"><img src="image/purchase-color03.jpg">
+                                </div>
+                                <div class="element slick"><img src="image/purchase-color04.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5>사이즈</h5>
+
+                        <div>
+                            <div class="size">085(XS)</div>
+                            <div class="size">090(S)</div>
+                            <div class="size">095(M)</div>
+                            <div class="size">100(L)</div>
+                            <div class="size">105(XL)</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h3 onclick="updateMainBoxQuantity(-1)">-</h3>
+                            <h4><span id="mainBoxQuantity">1</span></h4>
+                            <h3 onclick="updateMainBoxQuantity(1)">+</h3>
+                        </div>
+
+                        <div>
+                            <h5>주문금액</h5>
+                            <h5><span id="mainBoxFormattedPrice">329,000</span>원</h5>
+                        </div>
+                    </div>
+
+
+
+                    <div>
+                        <button class="button-sb">
+                            <p>장바구니</p>
+                        </button>
+                        <button class="button-bn">
+                            <p>바로구매</p>
+                        </button>
+                    </div>
+
+                    <div>
+                        <img src="https://www.fila.co.kr/pc/resource/images/sub/review_event_d_banner.jpg">
+
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+
+    </article>
+
+    <!--컬러 -->
+
+    <script>
+        $(document).ready(function () {
+
+            $('.color-slider').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                arrows: false,
+                dots: false,
+                autoplay: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // 필요한 경우 더 많은 반응형 설정 추가
+                ]
+            });
+        });
+    </script>
+
+    <!--계산기 for main box-->
+    <script>
+        let mainBoxQuantity = 1;
+        let mainBoxPrice = 329000; // 콤마를 제거하여 숫자로 변경
+
+        function updateMainBoxQuantity(amount) {
+            mainBoxQuantity += amount;
+            if (mainBoxQuantity < 0) {
+                mainBoxQuantity = 0;
+            }
+            document.getElementById("mainBoxQuantity").textContent = mainBoxQuantity;
+
+            // 수량이 증가 또는 감소할 때 가격도 연동하여 증가 또는 감소
+            mainBoxPrice = mainBoxQuantity * 329000; // 콤마를 제거하여 숫자로 변경
+            document.getElementById("mainBoxFormattedPrice").textContent = mainBoxPrice.toLocaleString(); // 콤마가 포함된 형식으로 표시
+        }
+    </script>
+
+
+
+    <article class="second-box">
+
+        <div class="second-left">
+            <div>
+                <ul class="list" id="list">
+                    <li><a href="#scroll1" class="scroll_move">상품상세정보</a></li>
+                    <li><a href="#scroll2" class="scroll_move">리뷰(3)</a></li>
+                </ul>
+            </div>
+
+            <div class="listbox">
+
+                <div class="scroll1" id="scroll1">
+
+                    <div class="product-img">
+                        <img src="image/purchase-scroll1-01.png" alt="패딩01">
+                        <img src="image/purchase-scroll1-05.png" alt="패딩05">
+                        <img src="image/purchase-scroll1-03.png" alt="패딩03">
+                        <img src="image/purchase-scroll1-04.png" alt="패딩04">
+                    </div>
+
+                    <hr>
+
+
+                    <h4 class="scroll-subt">모델컷</h4>
+
+                    <div class="scroll01-container">
+
+                        <div><img
+                                src="image/purchase-scroll01-container01.jpg"
+                                alt="Slide 1"></div>
+                        <div><img
+                                src="image/purchase-scroll01-container02.jpg"
+                                alt="Slide 2"></div>
+                        <div><img
+                                src="image/purchase-scroll01-container03.jpg"
+                                alt="Slide 3"></div>
+                        <div><img
+                                src="image/purchase-scroll01-container04.jpg"
+                                alt="Slide 4"></div>
+
+                    </div>
+
+                    <div class="scroll01-info">
+
+                        <h4 class="scroll-subt">정보</h4>
+
+                        <div>
+                            <section>
+                                <h5>신축성</h5>
+                                <div>
+                                    <h5 class="black">●</h5>
+                                    <h5>●</h5>
+                                    <h5>●</h5>
+                                </div>
+                                <div>
+                                    <h5>없음</h5>
+                                    <h5>보통</h5>
+                                    <h5>좋음</h5>
+                                </div>
+                            </section>
+
+                            <section>
+                                <h5>두께감</h5>
+                                <div>
+                                    <h5>●</h5>
+                                    <h5>●</h5>
+                                    <h5>●</h5>
+                                </div>
+                                <div>
+                                    <h5>얇음</h5>
+                                    <h5 class="black">보통</h5>
+                                    <h5>두꺼움</h5>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+
+                    <div class="scroll01-table">
+
+                        <h4 class="scroll-subt">실측사이즈</h4>
+
+                        <table>
+                            <tr>
+                                <td class="table-black" scope="col">사이즈</td>
+                                <td class="table-gray">085</td>
+                                <td class="table-gray">090</td>
+                                <td class="table-gray">095</td>
+                                <td class="table-gray">100</td>
+                            </tr>
+                            <tr>
+                                <td class="table-black" scope="col">총기장</td>
+                                <td>56</td>
+                                <td>58</td>
+                                <td>60</td>
+                                <td>62</td>
+                            </tr>
+                            <tr>
+                                <td class="table-black" scope="col">어깨너비</td>
+                                <td>47</td>
+                                <td>49</td>
+                                <td>51</td>
+                                <td>53</td>
+                            </tr>
+                            <tr>
+                                <td class="table-black" scope="col">가슴둘레</td>
+                                <td>115</td>
+                                <td>120</td>
+                                <td>125</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td class="table-black" scope="col">소매길이</td>
+                                <td>57.5</td>
+                                <td>58.5</td>
+                                <td>59.5</td>
+                                <td>60.5</td>
+                            </tr>
+                            <tr>
+                                <td class="table-black" scope="col">밑단둘레</td>
+                                <td>105</td>
+                                <td>110</td>
+                                <td>115</td>
+                                <td>120</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="scroll01-dinfo">
+
+                        <h3>상품고시정보</h3>
+
+                        <div>
+
+                            <table>
+
+                                <tr>
+                                    <th>상품명</th>
+                                    <td>
+                                        <한소희 착용>
+                                            <밀라노다운> 후드 구스다운 숏패딩자켓
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>상품코드</th>
+                                    <td>
+                                        1100FS2DJF4161FIVY</td>
+                                </tr>
+
+                                <tr>
+                                    <th>제품소재</th>
+                                    <td>겉감: 나일론 100% 안감: 나일론 100% 충전재1(몸판,모자): 거위솜털 80% 거위깃털 20% 충전재2(모자배색): 폴리에스터 100%
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>사이즈</th>
+                                    <td>085,090,095,100,105</td>
+                                </tr>
+
+                                <tr>
+                                    <th>색상</th>
+                                    <td>IVY(아이비)</td>
+                                </tr>
+
+                                <tr>
+                                    <th>제조국</th>
+                                    <td>인도네시아</td>
+                                </tr>
+
+                                <tr>
+                                    <th>제조년월</th>
+                                    <td>2023.08</td>
+                                </tr>
+
+                                <tr>
+                                    <th>제조사</th>
+                                    <td>휠라코리아(주)</td>
+                                </tr>
+
+                                <tr>
+                                    <th>세탁방법 및 취급시 주의사항</th>
+                                    <td>상세 취급방법 제품라벨 참조</td>
+                                </tr>
+
+                                <tr>
+                                    <th>품질보증기준</th>
+                                    <td>관련법 및 소비자 분쟁해결기준에 따름</td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="scroll2" id="scroll2">
+
+                    <div class="scroll02-review">
+
+                        <h3>리뷰</h3>
+
+                        <div class="review-01">
+
+                            <div>
+                                <h4>사용자 총 평점</h4>
+                                <h2 class="navy">4.9</h2>
+                                <h2 class="navy">★★★★★</h2>
+                            </div>
+
+                            <div>
+                                <section>
+                                    <div>
+                                        <h4>두께감</h4>
+                                        <div class="pie-chart2"><span class="center"></span></div>
+                                    </div>
+
+                                    <div>
+                                        <h5><span>■</span>얇음</h5>
+                                        <h5><span>■</span>보통</h5>
+                                        <h5><span>■</span>도톰함</h5>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div>
+                                        <h4>신축성</h4>
+                                        <div class="pie-chart3"><span class="center"></span></div>
+                                    </div>
+                                    <div>
+                                        <h5><span>■</span>좋음</h5>
+                                        <h5><span>■</span>약간있음</h5>
+                                        <h5><span>■</span>없음</h5>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+
+                        <div class="review-02">
+
+                            <div>
+
+                                <p>상품 구매 후 리뷰 작성시 Point를 드립니다. (포토리뷰 1,000포인트, 텍스트리뷰 300포인트 증정)</p>
+
+                                <p>★ 12월 리뷰이벤트 보기 / <span class="gray">전체 상품 리뷰 보기</span></p>
+
+                            </div>
+
+                            <div>
+
+                                <section>
+
+                                    <div class="que">
+
+                                        <div>
+                                            <div>
+                                                <h5 class="que01">★★★★★</h5>
+                                                <h5 class="que01">fila***</h5>
+                                                <h5>2024.02.08</h5>
+                                            </div>
+
+                                            <div>
+                                                <h5>이뻐요 배송도 빨라요 가벼워요 이쁘네요</h5>
+                                                <img
+                                                    src="image/purchase-review-icon.png">
+                                            </div>
+                                        </div>
+
+                                        <div class="arrow-wrap">
+                                            <span class="arrow-top"><i class="fa-solid fa-chevron-up"></i></span>
+                                            <span class="arrow-bottom"><i class="fa-solid fa-chevron-down"></i></span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="anw">
+                                        <div>
+                                            <h5>작년 밀라노 패딩 예뻐서 고민하다가 시즌 지나서 못 샀는데 이번에 심지어 구하기 힘든 예쁜 블랙으로 나와서 못참고 바로 질렀어요
+                                                유광 블랙 색감 넘 예뻐요!</h5>
+                                        </div>
+
+                                        <div>
+                                            <img
+                                                src="image/purchase-review01.jpg">
+                                        </div>
+
+                                        <div>
+                                            <p>· 핏감: 정사이즈</p>
+                                            <p>· 두께감: 도톰함</p>
+                                            <p>· 신축성: 없음</p>
+                                            <p>· 비침: 없음</p>
+                                        </div>
+
+                                        <div>
+                                            <p><i class="fa-regular fa-thumbs-up"></i>도움돼요</p>
+                                            <p><i class="fa-regular fa-thumbs-down"></i>도움안돼요</p>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="que">
+
+                                        <div>
+                                            <div>
+                                                <h5 class="que01">★★★★★</h5>
+                                                <h5 class="que01">marg***</h5>
+                                                <h5>2024.01.20</h5>
+                                            </div>
+
+                                            <div>
+                                                <h5>제 취향에 꼭 맞는 패딩을 발견했어요!</h5>
+                                                <img
+                                                    src="image/purchase-review-icon.png">
+                                            </div>
+                                        </div>
+
+                                        <div class="arrow-wrap">
+                                            <span class="arrow-top"><i class="fa-solid fa-chevron-up"></i></span>
+                                            <span class="arrow-bottom"><i class="fa-solid fa-chevron-down"></i></span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="anw">
+                                        <div>
+                                            <h5>갑자기 겨울 바다가 보고 싶어 훌쩍 다녀온 속초❄️☃️
+                                                피부가 시리는🥶 바닷바람에 저를 지켜준 건 바로 휠라 밀라노 다운!</h5>
+                                        </div>
+
+                                        <div>
+                                            <img
+                                                src="image/purchase-review02.jpg">
+                                        </div>
+
+                                        <div>
+                                            <p>· 핏감: 정사이즈</p>
+                                            <p>· 두께감: 도톰함</p>
+                                            <p>· 신축성: 없음</p>
+                                            <p>· 비침: 없음</p>
+                                        </div>
+
+                                        <div>
+                                            <p><i class="fa-regular fa-thumbs-up"></i>도움돼요</p>
+                                            <p><i class="fa-regular fa-thumbs-down"></i>도움안돼요</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="que">
+
+                                        <div>
+                                            <div>
+                                                <h5 class="que01">★★★★★</h5>
+                                                <h5 class="que01">padd***</h5>
+                                                <h5>2023.12.28</h5>
+                                            </div>
+
+                                            <div>
+                                                <h5>꽁꽁 얼어붙는 몸을 위해 패딩 한벌 추천드려요!!</h5>
+                                                <img
+                                                    src="image/purchase-review-icon.png">
+                                            </div>
+                                        </div>
+
+                                        <div class="arrow-wrap">
+                                            <span class="arrow-top"><i class="fa-solid fa-chevron-up"></i></span>
+                                            <span class="arrow-bottom"><i class="fa-solid fa-chevron-down"></i></span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="anw">
+                                        <div>
+                                            <h5>정말 요즘 날씨 실화인가요?! 꽁꽁 얼어붙는 몸을 위해 패딩 한벌 추천드려요!!
+
+                                                22년도 제품보다 경량성이나 보온성이 업그레이드 되었다고 하는데 가볍고 따수워요🔥</h5>
+                                        </div>
+
+                                        <div>
+                                            <img
+                                                src="image/purchase-review03.jpg">
+                                        </div>
+
+                                        <div>
+                                            <p>· 핏감: 정사이즈</p>
+                                            <p>· 두께감: 도톰함</p>
+                                            <p>· 신축성: 없음</p>
+                                            <p>· 비침: 없음</p>
+                                        </div>
+
+                                        <div>
+                                            <p><i class="fa-regular fa-thumbs-up"></i>도움돼요</p>
+                                            <p><i class="fa-regular fa-thumbs-down"></i>도움안돼요</p>
+                                        </div>
+
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="second-right">
+
+            <div class="second-right-p">
+
+                <div>
+                    <h5>사이즈</h5>
+                    <div>
+                        <div class="size">085(XS)</div>
+                        <div class="size">090(S)</div>
+                        <div class="size">095(M)</div>
+                        <div class="size">100(L)</div>
+                        <div class="size">105(XL)</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h3 onclick="updateSecondBoxQuantity(-1)">-</h3>
+                        <h4><span id="secondBoxQuantity">1</span></h4>
+                        <h3 onclick="updateSecondBoxQuantity(1)">+</h3>
+                    </div>
+
+                    <div>
+                        <h5>주문금액</h5>
+                        <h5><span id="secondBoxFormattedPrice">329,000</span>원</h5>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="button-sb">
+                        <p>장바구니</p>
+                    </button>
+                    <button class="button-bn">
+                        <p>바로구매</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </article>
+
+    <!--리뷰2 아코디언-->
+
+    <script>
+        $(document).ready(function () {
+            $(".que:first").next(".anw").stop().slideToggle(300);
+            $(".que:first").toggleClass('on');
+
+            // 아코디언 클릭 이벤트 처리
+            $(".que").click(function () {
+                $(this).next(".anw").stop().slideToggle(300);
+                $(this).toggleClass('on').siblings().removeClass('on');
+                $(this).next(".anw").siblings(".anw").slideUp(300);
+            });
+        });
+    </script>
+
+
+    <!--스크롤01 슬릭-->
+
+    <script>
+        // 슬라이드 초기화
+        $(document).ready(function () {
+            $('.scroll01-container').slick({
+                autoplay: false,
+                dots: true, // 동그라미 아이콘 표시
+                infinite: true, // 무한 반복
+                speed: 500, // 슬라이드 속도 (밀리초)
+                slidesToShow: 1, // 한 번에 보여줄 슬라이드 개수
+                slidesToScroll: 1 // 한 번에 스크롤할 슬라이드 개수
+            });
+        });
+    </script>
+
+
+
+    <script>
+        var list = document.getElementById('list');
+        var scroll1 = document.getElementById('scroll1');
+        var scroll2 = document.getElementById('scroll2');
+        var listOffset = list.offsetTop;
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset >= listOffset) {
+                list.classList.add('fixed');
+            } else {
+                list.classList.remove('fixed');
+            }
+
+            // #scroll1이 보일 때
+            if (isElementInViewport(scroll1)) {
+                highlightListItem('scroll1');
+            }
+
+            // #scroll2이 보일 때
+            if (isElementInViewport(scroll2)) {
+                highlightListItem('scroll2');
+            }
+
+            // second-box가 화면에서 사라질 때
+            var secondBox = document.querySelector('.second-box');
+            var secondBoxBottom = secondBox.offsetTop + secondBox.offsetHeight;
+            if (window.pageYOffset > secondBoxBottom) {
+                list.classList.remove('fixed');
+            }
+        });
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function highlightListItem(id) {
+            // 모든 리스트 아이템에서 'active' 클래스 제거
+            Array.from(list.getElementsByTagName('li')).forEach(function (li) {
+                li.classList.remove('active');
+            });
+
+            // 해당 리스트 아이템에 'active' 클래스 추가
+            var listItem = document.querySelector('a[href="#' + id + '"]').parentNode;
+            listItem.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            highlightListItem('scroll1');
+        });
+
+    </script>
+
+
+
+
+
+
+    <!--계산기 for second box-->
+    <script>
+        let secondBoxQuantity = 1;
+        let secondBoxPrice = 329000; // 콤마를 제거하여 숫자로 변경
+
+        function updateSecondBoxQuantity(amount) {
+            secondBoxQuantity += amount;
+            if (secondBoxQuantity < 0) {
+                secondBoxQuantity = 0;
+            }
+            document.getElementById("secondBoxQuantity").textContent = secondBoxQuantity;
+
+            // 수량이 증가 또는 감소할 때 가격도 연동하여 증가 또는 감소
+            secondBoxPrice = secondBoxQuantity * 329000; // 콤마를 제거하여 숫자로 변경
+            document.getElementById("secondBoxFormattedPrice").textContent = secondBoxPrice.toLocaleString(); // 콤마가 포함된 형식으로 표시
+        }
+    </script>
+
+
+    <!--secondbox전체 스크롤-->
+
+    <script>
+
+        $(document).ready(function ($) {
+            $(".scroll_move").click(function (event) {
+                console.log(".scroll_move");
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+            });
+
+        });
+
+    </script>
+
+
+
+    <!--사이즈-->
+
+    <script>
+
+        var size = document.getElementsByClassName("size");
+
+        function handleClick(event) {
+            console.log(event.target);
+            // console.log(this);
+            // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+            console.log(event.target.classList);
+
+            if (event.target.classList[1] === "clicked") {
+                event.target.classList.remove("clicked");
+            } else {
+                for (var i = 0; i < size.length; i++) {
+                    size[i].classList.remove("clicked");
+                }
+
+                event.target.classList.add("clicked");
+            }
+        }
+
+        function init() {
+            for (var i = 0; i < size.length; i++) {
+                size[i].addEventListener("click", handleClick);
+            }
+        }
+
+        init();
+
+
+    </script>
+
+
+
+
+    <article class="more-product">
+        <h3>이 상품을 본 고객이 함께 본 상품</h3>
+
+        <div class="best">
+
+            <div class="outer">
+
+                <div class="tabs">
+                    <div class="tab active">
+                        <div class="slider02">
+
+
+
+                            <div class="item02">
+                                <img
+                                    src="image/index-best-clothes03.jpg">
+                                <div>
+                                    <p>공용 FILA LIFESTYLE</p>
+                                    <p>립스탑 블럭다운 패딩자켓</p>
+                                    <p>329,000<span class="gray">296,000</span><span class="bold">10%</span></p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="item02">
+                                <img
+                                    src="image/index-best-clothes04.jpg">
+                                <div>
+                                    <p>FILA LIFESTYLE</p>
+                                    <p>프리미엄 아웃포켓 구스다운 패딩자켓</p>
+                                    <p>521,100<span class="gray">579,000</span><span class="bold">10%</span></p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="item02">
+                                <img
+                                    src="image/index-best-clothes06.jpg">
+                                <div>
+                                    <p>FILA LIFESTYLE</p>
+                                    <p>면혼방 트레이닝팬츠</p>
+                                    <p>99,000<span class="gray">90,000</span><span class="bold">10%</span></p>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="item02">
+                                <img
+                                    src="image/index-best-clothes07.jpg">
+                                <div>
+                                    <p>FILA LIFESTYLE</p>
+                                    <p>면혼방 카라 트레이닝자켓</p>
+                                    <p>63,000<span class="gray">31,500</span><span class="bold">50%</span></p>
+                                </div>
+
+
+                            </div>
+
+                            <div class="item02">
+                                <img
+                                    src="image/index-best-clothes08.jpg">
+                                <div>
+                                    <p>FILA LIFESTYLE</p>
+                                    <p>면혼방 기모 트레이닝팬츠</p>
+                                    <p>78,000<span class="gray">57,000</span><span class="bold">20%</span></p>
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </article>
+
+
+    <script>
+
+        $('button').click(function () {
+            var $this = $(this);
+            var index = $this.index();
+
+            $this.addClass('active');
+            $this.siblings('button.active').removeClass('active');
+
+            var $outer = $this.closest('.outer');
+            var $current = $outer.find(' > .tabs > .tab.active');
+            var $post = $outer.find(' > .tabs > .tab').eq(index);
+
+            $current.removeClass('active');
+            $post.addClass('active');
+            // 위의 코드는 탭메뉴 코드입니다.
+
+            $('.slider02').slick('setPosition');
+
+        });
+
+        // 기존 처음의 slick 적용
+        $('.slider02').slick({
+            slidesToShow: 5,
+            dots: false,
+        });
+
+    </script>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+
+
+
+</body>

@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>FILA-cyj</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 헤더 아이콘 폰트어썸 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- 메인 슬라이드 스와이퍼 -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+    <!-- AOS 플러그인 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+
+<body>
+
+    <div w3-include-html="header.html"></div>
+
+    <main>
+
+
+
+        <!-- 메인 슬라이드 -->
+        <div class="v-story-wrap con">
+            <h2 class="v-story-tt"></h2>
+            <div class="v-story-slider">
+                <div class="slider-item">
+                    <a href="#" class="block">
+                        <div class="img-box block">
+                            <video class="video1" autoplay muted playsinline loop>
+                                <source src="image/index_main_video01.mp4">
+                            </video>
+                        </div>
+
+                    </a>
+                    <div class="v-story-desc-list">
+
+                        <h2 class="v-story-desc"><span class="font-t">GIANT FOR THIS WINTER<br>MILANO DOWN</span></h2>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <a href="#" class="block">
+                        <div class="img-box">
+                            <img src="image/index_main_p.jpg" alt="">
+                        </div>
+
+                    </a>
+                    <div class="v-story-desc-list">
+                        <p class="v-story-desc-tt">모터스포츠 아카이브 / 라이프스타일 슈즈</p>
+                        <h2 class="v-story-desc"><span class="font-t">REPLICA 2002</span></h2>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <a href="#" class="block">
+                        <div class="img-box">
+                            <video class="video1" autoplay loop muted playsinline>
+                                <source src="image/index_main_video02.mp4">
+                            </video>
+                        </div>
+
+                    </a>
+                    <div class="v-story-desc-list">
+                        <p class="v-story-desc-tt">Collaboration</p>
+                        <h2 class="v-story-desc"><span class="font-t">FILA X THUG CLUB</span></h2>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <a href="#" class="block">
+                        <div class="img-box">
+                            <img src="image/index_main_p02.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="v-story-desc-list">
+                        <h2 class="v-story-desc"><span class="font-t">FILA SPORT INTERNATIONAL<br>
+                                DOWN COLLECTION</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-img">
+            <img src="image/index_arrow_img.png">
+            <img src="image/index_arrow_img.png">
+        </div>
+
+
+    </main>
+
+
+
+    <script>
+        console.clear();
+
+        // animation on scroll
+        AOS.init({
+            //once:true,
+            duration: 800,
+            easing: 'ease',
+        });
+
+
+
+        $('.v-story-slider').slick({
+            dots: true,
+            draggable: false,
+            arrows: true,
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: '300px',
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        centerPadding: '20vw',
+                    }
+                },
+                {
+                    breakpoint: 770,
+                    settings: {
+                        centerPadding: '0',
+                        arrows: false,
+                    }
+                },
+            ],
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+            // IE 호환성을 고려한 제이쿼리
+            if (currentSlide !== nextSlide) {
+                $('.slick-center + .slick-cloned').each(function (index, node) {
+                    var $node = $(node);
+
+                    setTimeout(function () {
+                        $node.addClass('slick-current');
+                        $node.addClass('slick-center');
+                    });
+                });
+            }
+        });
+    </script>
+
+    <article class="now">
+
+        <div>
+
+            <div>
+                <h1><span class="font-t">KEYWORD<br>RANGING</span></h1>
+
+
+                <div class="accordion-container">
+                    <div class="accordion-item" onclick="toggleAccordion(1)">
+                        <p>1&emsp;밀라노다운</p>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="image/index-accordion-content01.jpg">
+                        <img src="image/index-accordion-content02.jpg">
+                        <img src="image/index-accordion-content03.jpg">
+                        <img src="image/index-accordion-content04.jpg">
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(2)">
+                        <p>2&emsp;다운컬렉션</p>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="image/index-accordion-content05.jpg">
+                        <img src="image/index-accordion-content06.jpg">
+                        <img src="image/index-accordion-content07.jpg">
+                        <img src="image/index-accordion-content08.jpg">
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(3)">
+                        <p>3&emsp;경량패딩</p>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="image/index-accordion-content09.jpg">
+                        <img src="image/index-accordion-content10.jpg">
+                        <img src="image/index-accordion-content11.jpg">
+                        <img src="image/index-accordion-content12.jpg">
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(4)">
+                        <p>4&emsp;겨울슈즈</p>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="image/index-accordion-content13.jpg">
+                        <img src="image/index-accordion-content14.jpg">
+                        <img src="image/index-accordion-content15.jpg">
+                        <img src="image/index-accordion-content16.jpg">
+                    </div>
+
+                    <div class="accordion-item" onclick="toggleAccordion(5)">
+                        <p>5&emsp;트렌드</p>
+                    </div>
+                    <div class="accordion-content">
+                        <img src="image/index-accordion-content17.jpg">
+                        <img src="image/index-accordion-content18.jpg">
+                        <img src="image/index-accordion-content19.jpg">
+                        <img src="image/index-accordion-content20.jpg">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="now-wrap01">
+                    <div class="box">
+                        <div class="img">
+                            <img src="image/index-accordion-content09.jpg"
+                                alt="Hover Effect">
+                            <div class="info">
+                                <p>Fila Sports International</p>
+                                <p>에어플로우 경량 패딩</p>
+                                <p>139,000원<span>5%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <div class="now-wrap02">
+                            <div class="box">
+                                <div class="img">
+                                    <img src="image/index-now-wrap02.jpg"
+                                        alt="Hover Effect">
+                                </div>
+                                <div class="info">
+                                    <div>
+                                        <p>Fila Sports International</p>
+                                        <p>FILA SPORT 경량패딩</p>
+                                        <p>189,000원<span>5%</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>다운 숏패딩자켓</h3>
+                        <h5>트렌디 아우터</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="banner">
+        <a href="javascript:alert('준비중입니다.');" onfocus="this.blur()">
+            <div>
+                <h4>첫 쇼핑은 <span class="bold">FILA</span>가 쏠게요!</h4>
+                <p>신규가입 15% + 평생회원 가입 20% 쿠폰</p>
+            </div>
+            <img src="image/index-banner-coupon.png">
+        </a>
+        <a href="javascript:alert('준비중입니다.');" onfocus="this.blur()">
+            <div>
+                <h4>모바일로 <span class="bold">FILA</span> 쇼핑해요!</h4>
+                <p>앱 첫 로그인 20% 쿠폰 + 앱 첫 구매시 5천 포인트</p>
+            </div>
+            <img src="image/index-banner-coupon.png">
+        </a>
+    </article>
+
+
+    <script>
+
+        // 초기에 첫 번째 아코디언 펼치기
+        toggleAccordion(1);
+
+        // 일정 시간 간격으로 다음 아코디언 펼치기 (반복)
+        let currentIndex = 1;
+
+        setInterval(function () {
+            currentIndex = (currentIndex % 5) + 1; // 1, 2, 3 반복
+            toggleAccordion(currentIndex);
+        }, 3000); // 3초마다 다음 아코디언 펼치기
+
+        function toggleAccordion(index) {
+            const content = document.querySelector(`.accordion-content:nth-child(${index * 2})`);
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                // Close all other accordions
+                const allContents = document.querySelectorAll('.accordion-content');
+                allContents.forEach((item) => {
+                    item.style.maxHeight = null;
+                });
+
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+
+
+
+
+    <article class="live">
+
+
+
+        <h2><span class="font-t">FILA LIVE</span></h2>
+
+
+        <div class="main-slider">
+
+
+
+            <div class="item item-1">
+
+                <div class="left-s">
+
+                    <div>
+                        <h3 class="live-sub-t">
+                            <span class="font-t">NEW</span>
+                        </h3>
+                        <h5>STYLE 추천 받기<i class="fa-solid fa-chevron-right"></i></h5>
+                    </div>
+
+
+                    <div>
+                        <section>
+                            <img
+                                src="image/index-live01.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 퀼팅 구스다운 패딩베스트</p>
+                                <p>259,000<span class="gray">205,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live02.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>면혼방 기모 트레이닝자켓</p>
+                                <p>99,000원<span class="gray">95,000</span><span class="bold">5%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live03.jpg">
+                            <div>
+                                <p>Mini Crossbag</p>
+                                <p>밀라노 프리미엄 크로스백</p>
+                                <p>593,100<span class="gray">659,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="inner-slider">
+                    <div class="goods goods-1">
+                        <img src="image/index-live-right01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+
+                    </div>
+                    <div class="goods goods-2">
+                        <img src="image/index-live-right02.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-3">
+                        <img src="image/index-live-right03.jpg">
+
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="item item-2">
+
+                <div class="left-s">
+
+                    <div>
+                        <h3 class="live-sub-t">
+                            <span class="font-t">NEW</span>
+                        </h3>
+                        <h5>STYLE 추천 받기<i class="fa-solid fa-chevron-right"></i></h5>
+                    </div>
+
+
+                    <div>
+                        <section>
+                            <img
+                                src="image/index-live04.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 퀼팅 구스다운 패딩베스트</p>
+                                <p>379,000<span class="gray">341,100</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live05.jpg">
+                            <div>
+                                <p>Mini Crossbag</p>
+                                <p>밀라노 미니 크로스백</p>
+                                <p>233,100<span class="gray">259,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live06.jpg">
+                            <div>
+                                <p>Glossy gloves</p>
+                                <p>밀라노 글로시 장갑</p>
+                                <p>99,000<span class="gray">99,000</span><span class="bold">0%</span></p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="inner-slider">
+                    <div class="goods goods-1">
+                        <img src="image/index-live-right02-01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+
+                    </div>
+                    <div class="goods goods-2">
+                        <img src="image/index-live-right02-02.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-3">
+                        <img src="image/index-live-right02-01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-4">
+                        <img
+                            src="image/index-live-right02-03.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item item-3">
+
+                <div class="left-s">
+
+                    <div>
+                        <h3 class="live-sub-t">
+                            <span class="font-t">NEW</span>
+                        </h3>
+                        <h5>STYLE 추천 받기<i class="fa-solid fa-chevron-right"></i></h5>
+                    </div>
+
+
+                    <div>
+                        <section>
+                            <img
+                                src="image/index-live07.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 퀼팅 구스다운 패딩자켓</p>
+                                <p>379,000<span class="gray">341,100</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live08.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>벨티드 구스다운 롱패딩자켓</p>
+                                <p>499,900<span class="gray">450,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live09.jpg">
+                            <div>
+                                <p>Knit gloves</p>
+                                <p>니트 장갑</p>
+                                <p>39,000<span class="gray">39,000</span><span class="bold">0%</span></p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="inner-slider">
+                    <div class="goods goods-1">
+                        <img src="image/index-live-right03-01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+
+                    </div>
+                    <div class="goods goods-2">
+                        <img src="image/index-live-right03-02.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-3">
+                        <img src="image/index-live-right03-03.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="item item-4">
+
+                <div class="left-s">
+
+                    <div>
+                        <h3 class="live-sub-t">
+                            <span class="font-t">NEW</span>
+                        </h3>
+                        <h5>STYLE 추천 받기<i class="fa-solid fa-chevron-right"></i></h5>
+                    </div>
+
+
+                    <div>
+                        <section>
+                            <img
+                                src="image/index-live10.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 퀼팅 구스다운 패딩자켓</p>
+                                <p>521,100<span class="gray">579,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live11.jpg">
+                            <div>
+                                <p>FiLA Tennis</p>
+                                <p>케이블니트 자켓</p>
+                                <p>233,100<span class="gray">259,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live12.jpg">
+                            <div>
+                                <p>TOTE BAG</p>
+                                <p>밀라노 프리미엄 토트백</p>
+                                <p>593,100<span class="gray">659,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="inner-slider">
+                    <div class="goods goods-1">
+                        <img src="image/index-live-right04-01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+
+                    </div>
+                    <div class="goods goods-2">
+                        <img src="image/index-live-right04-02.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-3">
+                        <img src="image/index-live-right04-03.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-4">
+                        <img
+                            src="image/index-live-right04-04.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="item item-5">
+
+                <div class="left-s">
+
+                    <div>
+                        <h3 class="live-sub-t">
+                            <span class="font-t">NEW</span>
+                        </h3>
+                        <h5>STYLE 추천 받기<i class="fa-solid fa-chevron-right"></i></h5>
+                    </div>
+
+
+                    <div>
+                        <section>
+                            <img
+                                src="image/index-live13.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>오크먼트 TR v2</p>
+                                <p>79,000<span class="gray">69,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live14.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>오크먼트 TR 다이얼 v2</p>
+                                <p>79,000<span class="gray">69,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <img
+                                src="image/index-live15.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>오크먼트 TR 다이얼 v2</p>
+                                <p>79,000<span class="gray">69,000</span><span class="bold">10%</span></p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="inner-slider">
+                    <div class="goods goods-1">
+                        <img src="image/index-live-right04-01.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+
+                    </div>
+                    <div class="goods goods-2">
+                        <img src="image/index-live-right04-02.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-3">
+                        <img src="image/index-live-right04-03.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                    <div class="goods goods-4">
+                        <img src="image/index-live-right04-04.jpg">
+                        <div>
+                            <p>FILA LIFESTYLE</p>
+                            <h2>프리미엄 퀼팅<br>구스다운 패딩SET</h2>
+                            <p>보온성과 가벼운 착용감을 한번에!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="live-btn">
+
+            <div class="arrow left-arrow">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+
+            <div class="slider-btn item-1-btn">
+                <h4>CLASSIC</h4>
+            </div>
+            <div class="slider-btn item-2-btn">
+                <h4>TRENDY</h4>
+            </div>
+            <div class="slider-btn item-3-btn">
+                <h4>SOFT</h4>
+            </div>
+            <div class="slider-btn item-4-btn">
+                <h4>MODERN</h4>
+            </div>
+            <div class="slider-btn item-5-btn">
+                <h4>SPORTY</h4>
+            </div>
+
+
+            <div class="arrow right-arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+        </div>
+
+
+
+    </article>
+
+    <script>
+        // 좌측 화살표 클릭 시
+        $('.left-arrow').on('click', function () {
+            mainSlider.slick('slickPrev');
+            innerSlider.slick('slickPrev');
+        });
+
+        // 우측 화살표 클릭 시
+        $('.right-arrow').on('click', function () {
+            mainSlider.slick('slickNext');
+            innerSlider.slick('slickNext');
+        });
+
+        $('.item-1-btn h4').css({
+            'font-weight': 'bold',
+            'color': 'black'
+        });
+
+
+        // 클릭한 버튼의 스타일 변경 및 해당 슬라이드로 이동
+        function makeBtnActiveAndMove(btn, slideIndex) {
+            // 모든 버튼의 스타일 초기화
+            $('.slider-btn h4').css({
+                'font-weight': 'normal',
+                'color': 'gray'
+            });
+
+            // 클릭한 버튼의 스타일 변경
+            btn.find('h4').css({
+                'font-weight': 'bold',
+                'color': 'black'
+            });
+
+            // 해당 슬라이드로 이동
+            mainSlider.slick('slickGoTo', slideIndex);
+            innerSlider.slick('slickGoTo', slideIndex);
+        }
+
+        // 클릭 이벤트
+        $('.item-1-btn').on('click', function () {
+            makeBtnActiveAndMove($(this), 0);
+        });
+
+        $('.item-2-btn').on('click', function () {
+            makeBtnActiveAndMove($(this), 1);
+        });
+
+        $('.item-3-btn').on('click', function () {
+            makeBtnActiveAndMove($(this), 2);
+        });
+
+        $('.item-4-btn').on('click', function () {
+            makeBtnActiveAndMove($(this), 3);
+        });
+
+        $('.item-5-btn').on('click', function () {
+            makeBtnActiveAndMove($(this), 4);
+        });
+
+        // 좌측 화살표 클릭 시
+        $('.left-arrow').on('click', function () {
+            var currentIndex = mainSlider.slick('slickCurrentSlide');
+            makeBtnActiveAndMove($(`.item-${currentIndex + 1}-btn`), currentIndex - 1);
+        });
+
+        // 우측 화살표 클릭 시
+        $('.right-arrow').on('click', function () {
+            var currentIndex = mainSlider.slick('slickCurrentSlide');
+            makeBtnActiveAndMove($(`.item-${currentIndex + 1}-btn`), currentIndex + 1);
+        });
+    </script>
+
+
+    <script>
+        var mainSlider = $('.main-slider');
+        var innerSlider = $('.inner-slider');
+
+        mainSlider.slick({
+            slidesToShow: 1,
+            dots: true,  // 닷을 활성화하려면 true로 설정
+            customPaging: function (slider, i) {
+                // 여기에서 닷의 HTML을 커스터마이징할 수 있습니다.
+                return '<button class="dot"></button>';
+            },
+            arrows: false,
+        });
+
+        innerSlider.slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
+
+
+        // 겉에 있는 슬라이드 명을 클릭하면 해당 슬라이드로 이동
+        $('.item-1-btn').on('click', function () {
+            mainSlider.slick('slickGoTo', 0);
+        });
+
+        $('.item-2-btn').on('click', function () {
+            mainSlider.slick('slickGoTo', 1);
+        });
+
+        $('.item-3-btn').on('click', function () {
+            mainSlider.slick('slickGoTo', 2);
+        });
+
+        $('.item-4-btn').on('click', function () {
+            mainSlider.slick('slickGoTo', 3);
+        });
+
+        $('.item-5-btn').on('click', function () {
+            mainSlider.slick('slickGoTo', 4);
+        });
+
+
+    </script>
+
+
+    <article class="best">
+
+        <h3><span class="font-t">Best styling just for you</span></h3>
+
+        <div class="outer">
+            <div class="buttons">
+                <button class="active">
+                    <h2><span class="font-t">clothes best<span></h2>
+                </button>
+                <button>
+                    <h2><span class="font-t">shoes best<span></h2>
+                </button>
+            </div>
+            <div class="tabs">
+                <div class="tab active">
+                    <div class="slider02">
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes01.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>[한소희 착용] 후드 구스다운 숏패딩자켓</p>
+                                <p>521,100<span class="gray">579,000</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">1</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes02.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>[한소희 착용] 후드 구스다운 숏패딩자켓</p>
+                                <p>521,100<span class="gray">364,800</span><span class="bold">30%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">2</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes03.jpg">
+                            <div>
+                                <p>공용 FILA LIFESTYLE</p>
+                                <p>립스탑 블럭다운 패딩자켓</p>
+                                <p>329,000<span class="gray">296,000</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">3</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes04.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 아웃포켓 구스다운 패딩자켓</p>
+                                <p>521,100<span class="gray">579,000</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">4</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes05.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>프리미엄 퀼팅 구스다운 패딩자켓</p>
+                                <p>459,000<span class="gray">321,300</span><span class="bold">30%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">5</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes06.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>면혼방 트레이닝팬츠</p>
+                                <p>99,000<span class="gray">90,000</span><span class="bold">10%</span></p>
+                            </div>
+
+
+                            <div class="number">
+                                <h3><span class="font-t">6</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes07.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>면혼방 카라 트레이닝자켓</p>
+                                <p>63,000<span class="gray">31,500</span><span class="bold">50%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">7</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes08.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>면혼방 기모 트레이닝팬츠</p>
+                                <p>78,000<span class="gray">57,000</span><span class="bold">20%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">8</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-clothes09.jpg">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>실키보아 플리스자켓</p>
+                                <p>63,000<span class="gray">31,500</span><span class="bold">50%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">9</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img src="image/index-best-clothes10.jpg
+                                ">
+                            <div>
+                                <p>FILA LIFESTYLE</p>
+                                <p>베이직 리니어 반팔티</p>
+                                <p>51,100<span class="gray">44,000</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">10</span></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--슈즈 -->
+
+                <div class="tab">
+                    <div class="slider02">
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes01.jpg">
+                            <div>
+                                <p>정사이즈핏 FILA LIFESTYLE</p>
+                                <p>푸퍼 매트</p>
+                                <p>79,000<span class="gray">71,100</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">1</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes02.jpg">
+                            <div>
+                                <p>정사이즈핏 FILA LIFESTYLE</p>
+                                <p>푸퍼 매트</p>
+                                <p>79,000<span class="gray">71,100</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">2</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes03.jpg">
+                            <div>
+                                <p>정사이즈핏 FILA LIFESTYLE</p>
+                                <p>푸퍼 매트</p>
+                                <p>79,000<span class="gray">71,100</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">3</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes04.jpg">
+                            <div>
+                                <p>공용 FILA LIFESTYLE</p>
+                                <p>오크먼트 TR 다이얼 v2</p>
+                                <p>99,000<span class="gray">90,000</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">4</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes05.jpg">
+                            <div>
+                                <p>공용 FILA LIFESTYLE</p>
+                                <p>우드블록 STR</p>
+                                <p>79,000<span class="gray">71,100</span><span class="bold">10%</span></p>
+                            </div>
+
+                            <div class="number">
+                                <h3><span class="font-t">5</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="item02">
+                            <img
+                                src="image/index-best-shoes06.jpg">
+                            <div>
+                                <p>공용 FILA LIFESTYLE</p>
+                                <p>디스럽터 2 1998</p>
+                                <p>99,000<span class="gray">90,000</span><span class="bold">10%</span></p>
+                            </div>
+
+
+                            <div class="number">
+                                <h3><span class="font-t">6</span></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="arrow-img">
+                    <img
+                        src="image/index_arrow_img.png">
+                    <img
+                        src="image/index_arrow_img.png">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+    <script>
+
+        $('button').click(function () {
+            var $this = $(this);
+            var index = $this.index();
+
+            $this.addClass('active');
+            $this.siblings('button.active').removeClass('active');
+
+            var $outer = $this.closest('.outer');
+            var $current = $outer.find(' > .tabs > .tab.active');
+            var $post = $outer.find(' > .tabs > .tab').eq(index);
+
+            $current.removeClass('active');
+            $post.addClass('active');
+            // 위의 코드는 탭메뉴 코드입니다.
+
+            $('.slider02').slick('setPosition');
+
+        });
+
+        // 기존 처음의 slick 적용
+        $('.slider02').slick({
+            slidesToShow: 5,
+            dots: true,
+        });
+
+    </script>
+
+
+
+    <article class="tv">
+
+        <div>
+            <h2><span class="font-t">F-TV<span></h2>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div data-aos="fade-up">
+            <img class="tv-b" src="image/index-tv-p.jpg">
+
+            <div class="Click-here"><img src="image/index-tv-click.png">
+            </div>
+        </div>
+
+
+        <div class="custom-model-main">
+            <div class="custom-model-inner">
+                <div class="close-btn">×</div>
+                <div class="custom-model-wrap">
+                    <div class="pop-up-content-wrap">
+                        <iframe width="600" height="380"
+                            src="https://www.youtube.com/embed/57TbO07DuCo?si=0VnnL3D5k3XsJ8RM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+    </article>
+
+    <script>
+
+        $(".Click-here").on('click', function () {
+            $(".custom-model-main").addClass('model-open');
+        });
+        $(".close-btn, .bg-overlay").click(function () {
+            $(".custom-model-main").removeClass('model-open');
+        });
+
+
+    </script>
+
+
+
+
+
+    <article class="style">
+
+        <div>
+
+            <div>
+                <h5>기획전</h5>
+                <div>
+                    <h2>FILA Y2K STYLE</h2>
+                    <img src="./image/index_style_p01.png">
+                </div>
+            </div>
+
+            <div>
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-container"><img src="./image/index_style_p02.png"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-container"><img src="./image/index_style_p03.png"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-container"><img src="./image/index_style_p04.png"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-container"><img src="./image/index_style_p05.png"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide-container"><img src="./image/index_style_p06.png"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="wrap_thumb_layout">
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-container"><img src="./image/index_style_p04.png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-container"><img src="./image/index_style_p05.png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-container"><img src="./image/index_style_p06.png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-container"><img src="./image/index_style_p02.png"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-container"><img src="./image/index_style_p03.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        var swiperTopNum = $('.gallery-top').find('.swiper-slide');
+        var swiperSubNum = $('.gallery-thumbs').find('.gallery-thumbs');
+
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                type: 'bullets',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+            loop: true,
+            loopedSlides: swiperTopNum.length,
+            autoplay: {
+                delay: 3000, // 3초마다 슬라이드
+                disableOnInteraction: false, //
+            },
+        });
+
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true,
+            loop: true,
+            loopedSlides: swiperSubNum.length,
+            autoplay: {
+                delay: 3000, // 3초마다 슬라이드
+                disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
+            },
+        });
+
+        // Main Swiper와 Thumbnail Swiper가 연동제어 서로를 제어
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
+    </script>
+
+    <article class="sns">
+
+        <div>
+            <img src="image/index-sns-logo.png">
+            <h3>@fila_korea</h3>
+        </div>
+
+        <div data-aos="fade-up">
+            <div><img src="image/index_sns_01.jpg">
+            </div>
+            <div><img src="image/index_sns_02.jpg">
+            </div>
+            <div><img src="image/index_sns_03.jpg">
+            </div>
+            <div><img src="image/index_sns_04.jpg">
+            </div>
+            <div><img src="image/index_sns_05.jpg">
+            </div>
+        </div>
+
+
+    </article>
+
+    <article class="review">
+
+        <h2><span class="font-t">best review</span></h2>
+
+        <div>
+
+            <section>
+                <div>
+                    <img
+                        src="image/index-review-0101.jpg">
+                </div>
+
+                <div>
+                    <p>★★★★★</p>
+                    <p>M / BLACK</p>
+                </div>
+
+                <div>
+                    <img src="image/index-review-0102.jpg">
+                    <div>
+                        <p>FILA LIFESTYLE</p>
+                        <p>모터코어 컬러블럭 패딩자켓</p>
+                        <p>143,100<span class="gray">79,000</span><span class="bold">45%</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section>
+                <div>
+                    <img
+                        src="image/index-review-0201.jpg">
+                </div>
+
+                <div>
+                    <p>★★★★★</p>
+                    <p>XS / BLACK</p>
+                </div>
+
+                <div>
+                    <img
+                        src="image/index-review-0202.jpg">
+                    <div>
+                        <p>FILA LIFESTYLE</p>
+                        <p>모터코어 컬러블럭 우븐팬츠
+                        </p>
+                        <p>79,100<span class="gray">59,000</span><span class="bold">19%</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section>
+                <div>
+                    <img
+                        src="image/index-review-0301.jpg">
+                </div>
+
+                <div>
+                    <p>★★★★★</p>
+                    <p>M / BLACK</p>
+                </div>
+
+                <div>
+                    <img
+                        src="image/index-review-0302.jpg">
+                    <div>
+                        <p>FILA LIFESTYLE</p>
+                        <p>모터코어 컬러블럭 바람막이</p>
+                        <p>139,100<span class="gray">79,000</span><span class="bold">40%</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section>
+                <div>
+                    <img
+                        src="image/index-review-0401.jpg">
+                </div>
+
+                <div>
+                    <p>★★★★★</p>
+                    <p>L / BLACK</p>
+                </div>
+
+                <div>
+                    <img
+                        src="image/index-review-0402.jpg">
+                    <div>
+                        <p>FILA LIFESTYLE</p>
+                        <p>2 Layer 쉘 자켓</p>
+                        <p>79,000<span class="gray">79,000</span><span class="bold">0%</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section>
+                <div>
+                    <img
+                        src="image/index-review-0501.jpg">
+                </div>
+
+                <div>
+                    <p>★★★★★</p>
+                    <p>XS / BLACK</p>
+                </div>
+
+                <div>
+                    <img
+                        src="image/index-review-0502.jpg">
+                    <div>
+                        <p>FILA LIFESTYLE</p>
+                        <p>2 Layer 쉘 자켓</p>
+                        <p>79,000<span class="gray">79,000</span><span class="bold">0%</span></p>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </article>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+
+
+    <a class="top-button" href="#"><img src="image/index-top-button.png"></a>
+</body>
